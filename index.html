@@ -565,91 +565,91 @@
     let currentLang = localStorage.getItem('cy_study_lang') || 'ar';
     let currentTheme = localStorage.getItem('cy_study_theme') || 'dark';
 
-    // توزيع المواد من اليمين إلى اليسار كما في البوستر تماماً
+    // شبكة إحداثيات مدروسة بدون أي تداخل بين الدوائر
     const nodes = [
       // الصف 1 (y: 170)
-      { id: "sec_fund", name_ar: "أساسيات\nالأمن\nالسيبراني", name_en: "Cybersecurity\nFundamentals", cr: 3, x: 1220, y: 170, stroke: "#d946ef" },
-      { id: "eng1", name_ar: "اللغة\nالإنجليزية\nومهارات الاتصال", name_en: "English\nCommunication", cr: 3, x: 1080, y: 170, stroke: "#f43f5e" },
-      { id: "life_skills", name_ar: "المهارات\nالحياتية", name_en: "Life\nSkills", cr: 2, x: 920, y: 170, stroke: "#f43f5e" },
-      { id: "intro_it", name_ar: "مقدمة إلى\nتكنولوجيا\nالمعلومات", name_en: "Intro to\nIT", cr: 3, x: 760, y: 170, stroke: "#b91c1c" },
-      { id: "prog1", name_ar: "مقدمة\nفي البرمجة", name_en: "Intro to\nProgramming", cr: 3, x: 600, y: 170, stroke: "#f59e0b" },
-      { id: "calc2", name_ar: "تفاضل\nوتكامل 2", name_en: "Calculus\n2", cr: 3, x: 380, y: 170, stroke: "#0284c7" },
-      { id: "calc1", name_ar: "تفاضل\nوتكامل 1", name_en: "Calculus\n1", cr: 3, x: 220, y: 170, stroke: "#0284c7" },
+      { id: "sec_fund", name_ar: "أساسيات\nالأمن السيبراني", name_en: "Cybersecurity\nFundamentals", cr: 3, x: 1300, y: 170, stroke: "#d946ef" },
+      { id: "eng1", name_ar: "اللغة الإنجليزية\nومهارات الاتصال", name_en: "English\nCommunication", cr: 3, x: 1140, y: 170, stroke: "#f43f5e" },
+      { id: "life_skills", name_ar: "المهارات\nالحياتية", name_en: "Life\nSkills", cr: 2, x: 980, y: 170, stroke: "#f43f5e" },
+      { id: "intro_it", name_ar: "مقدمة إلى\nتكنولوجيا المعلومات", name_en: "Intro to\nIT", cr: 3, x: 820, y: 170, stroke: "#b91c1c" },
+      { id: "prog1", name_ar: "مقدمة\nفي البرمجة", name_en: "Intro to\nProgramming", cr: 3, x: 660, y: 170, stroke: "#f59e0b" },
+      { id: "calc2", name_ar: "تفاضل\nوتكامل 2", name_en: "Calculus 2", cr: 3, x: 420, y: 170, stroke: "#0284c7" },
+      { id: "calc1", name_ar: "تفاضل\nوتكامل 1", name_en: "Calculus 1", cr: 3, x: 260, y: 170, stroke: "#0284c7" },
 
       // الصف 2 (y: 310)
-      { id: "risk_mgmt", name_ar: "إدارة المخاطر", name_en: "Risk\nManagement", cr: 3, x: 1300, y: 310, stroke: "#d946ef" },
-      { id: "sec_ethics", name_ar: "أخلاقيات\nالأمن\nالسيبراني", name_en: "Cybersecurity\nEthics", cr: 3, x: 1120, y: 310, stroke: "#d946ef" },
+      { id: "risk_mgmt", name_ar: "إدارة\nالمخاطر", name_en: "Risk\nManagement", cr: 3, x: 1380, y: 310, stroke: "#d946ef" },
+      { id: "sec_ethics", name_ar: "أخلاقيات\nالأمن السيبراني", name_en: "Cybersecurity\nEthics", cr: 3, x: 1220, y: 310, stroke: "#d946ef" },
       { id: "discrete", name_ar: "رياضيات\nمتقطعة", name_en: "Discrete\nMath", cr: 3, x: 1060, y: 310, stroke: "#0284c7" },
-      { id: "uni_elec1", name_ar: "متطلب جامعة\nاختياري", name_en: "University\nElective (1)", cr: 3, x: 880, y: 310, stroke: "#64748b" },
-      { id: "oop", name_ar: "مقدمة في\nالبرمجة\nالكينونية", name_en: "Intro to\nOOP", cr: 3, x: 720, y: 310, stroke: "#b91c1c" },
-      { id: "prob", name_ar: "إحصاء\nواحتمالات", name_en: "Probability &\nStatistics", cr: 3, x: 560, y: 310, stroke: "#0284c7" },
-      { id: "uni_elec2", name_ar: "متطلب جامعة\nاختياري", name_en: "University\nElective (2)", cr: 3, x: 370, y: 310, stroke: "#64748b" },
-      { id: "linear_alg", name_ar: "مبادئ الجبر\nالخطي", name_en: "Linear\nAlgebra", cr: 3, x: 220, y: 310, stroke: "#0284c7" },
+      { id: "uni_elec1", name_ar: "متطلب جامعة\nاختياري", name_en: "University\nElective (1)", cr: 3, x: 900, y: 310, stroke: "#64748b" },
+      { id: "oop", name_ar: "مقدمة في\nالبرمجة الكينونية", name_en: "Intro to\nOOP", cr: 3, x: 740, y: 310, stroke: "#b91c1c" },
+      { id: "prob", name_ar: "إحصاء\nواحتمالات", name_en: "Probability &\nStatistics", cr: 3, x: 580, y: 310, stroke: "#0284c7" },
+      { id: "uni_elec2", name_ar: "متطلب جامعة\nاختياري", name_en: "University\nElective (2)", cr: 3, x: 420, y: 310, stroke: "#64748b" },
+      { id: "linear_alg", name_ar: "مبادئ\nالجبر الخطي", name_en: "Linear\nAlgebra", cr: 3, x: 260, y: 310, stroke: "#0284c7" },
 
       // الصف 3 (y: 450)
-      { id: "db_fund", name_ar: "أساسيات\nقواعد\nالبيانات", name_en: "Database\nFundamentals", cr: 3, x: 1220, y: 450, stroke: "#0284c7" },
-      { id: "modern_os", name_ar: "مبادئ نظم\nالتشغيل\nالحديثة", name_en: "Modern Operating\nSystems", cr: 3, x: 1050, y: 450, stroke: "#f59e0b" },
-      { id: "ds", name_ar: "تراكيب\nالبيانات", name_en: "Data\nStructures", cr: 3, x: 970, y: 450, stroke: "#f59e0b" },
+      { id: "db_fund", name_ar: "أساسيات\nقواعد البيانات", name_en: "Database\nFundamentals", cr: 3, x: 1300, y: 450, stroke: "#0284c7" },
+      { id: "modern_os", name_ar: "مبادئ نظم\nالتشغيل الحديثة", name_en: "Modern OS", cr: 3, x: 1140, y: 450, stroke: "#f59e0b" },
+      { id: "ds", name_ar: "تراكيب\nالبيانات", name_en: "Data\nStructures", cr: 3, x: 980, y: 450, stroke: "#f59e0b" },
       { id: "assembly", name_ar: "مختبر لغة\nAssembly", name_en: "Assembly\nLab", cr: 1, x: 820, y: 450, stroke: "#d946ef" },
-      { id: "visual_lang", name_ar: "لغة برمجة\nمرئية مختارة", name_en: "Selected Visual\nProg. Lang.", cr: 3, x: 670, y: 450, stroke: "#d946ef" },
+      { id: "visual_lang", name_ar: "لغة برمجة\nمرئية مختارة", name_en: "Selected Visual\nProg. Lang.", cr: 3, x: 660, y: 450, stroke: "#d946ef" },
       { id: "crypto", name_ar: "نظرية\nالتشفير", name_en: "Cryptography\nTheory", cr: 3, x: 500, y: 450, stroke: "#d946ef" },
-      { id: "intro_web", name_ar: "تصميم\nصفحات\nالويب", name_en: "Web Page\nDesign", cr: 3, x: 340, y: 450, stroke: "#0284c7" },
-      { id: "uni_elec3", name_ar: "متطلب جامعة\nاختياري", name_en: "University\nElective (3)", cr: 3, x: 170, y: 450, stroke: "#64748b" },
+      { id: "intro_web", name_ar: "تصميم\nصفحات الويب", name_en: "Web Page\nDesign", cr: 3, x: 340, y: 450, stroke: "#0284c7" },
+      { id: "uni_elec3", name_ar: "متطلب جامعة\nاختياري", name_en: "University\nElective (3)", cr: 3, x: 180, y: 450, stroke: "#64748b" },
 
       // الصف 4 (y: 590)
-      { id: "sys_analysis", name_ar: "تحليل\nوتصميم\nالنظم", name_en: "Systems Analysis\n& Design", cr: 3, x: 1300, y: 590, stroke: "#0284c7" },
-      { id: "algo", name_ar: "تحليل\nوتصميم\nالخوارزميات", name_en: "Algorithms\nAnalysis & Design", cr: 3, x: 880, y: 590, stroke: "#f59e0b" },
-      { id: "rev_eng", name_ar: "هندسة\nالبرمجيات\nالعكسية", name_en: "Reverse\nEngineering", cr: 3, x: 720, y: 590, stroke: "#d946ef" },
-      { id: "dig_foren", name_ar: "التحقيق\nالجنائي\nالرقمي", name_en: "Digital\nForensics", cr: 3, x: 560, y: 590, stroke: "#d946ef" },
-      { id: "mil_sci", name_ar: "علوم عسكرية", name_en: "Military\nSciences", cr: 3, x: 380, y: 590, stroke: "#f43f5e" },
-      { id: "arabic", name_ar: "اللغة العربية\nومهارات الاتصال\nوالتواصل", name_en: "Arabic\nCommunication", cr: 3, x: 220, y: 590, stroke: "#f43f5e" },
+      { id: "sys_analysis", name_ar: "تحليل\nوتصميم النظم", name_en: "Systems Analysis\n& Design", cr: 3, x: 1300, y: 590, stroke: "#0284c7" },
+      { id: "algo", name_ar: "تحليل وتصميم\nالخوارزميات", name_en: "Algorithms\nAnalysis & Design", cr: 3, x: 980, y: 590, stroke: "#f59e0b" },
+      { id: "rev_eng", name_ar: "هندسة البرمجيات\nالعكسية", name_en: "Reverse\nEngineering", cr: 3, x: 820, y: 590, stroke: "#d946ef" },
+      { id: "dig_foren", name_ar: "التحقيق\nالجنائي الرقمي", name_en: "Digital\nForensics", cr: 3, x: 660, y: 590, stroke: "#d946ef" },
+      { id: "mil_sci", name_ar: "علوم\nعسكرية", name_en: "Military\nSciences", cr: 3, x: 420, y: 590, stroke: "#f43f5e" },
+      { id: "arabic", name_ar: "اللغة العربية\nومهارات الاتصال", name_en: "Arabic\nCommunication", cr: 3, x: 260, y: 590, stroke: "#f43f5e" },
 
       // الصف 5 (y: 730)
-      { id: "linux_lab", name_ar: "مختبر نظام\nLinux", name_en: "Linux System\nLab", cr: 1, x: 1110, y: 730, stroke: "#d946ef" },
-      { id: "networks", name_ar: "شبكات\nالحاسوب", name_en: "Computer\nNetworks", cr: 3, x: 960, y: 730, stroke: "#d946ef" },
-      { id: "net_lab", name_ar: "مختبر شبكات\nالحاسوب", name_en: "Computer\nNetworks Lab", cr: 1, x: 810, y: 730, stroke: "#d946ef" },
-      { id: "ai", name_ar: "الذكاء\nالاصطناعي", name_en: "Artificial\nIntelligence", cr: 3, x: 640, y: 730, stroke: "#f59e0b" },
-      { id: "leadership", name_ar: "القيادة\nوالمسؤولية\nالمجتمعية", name_en: "Leadership &\nResponsibility", cr: 2, x: 480, y: 730, stroke: "#f43f5e" },
-      { id: "dept_elec1", name_ar: "اختياري\nقسم", name_en: "Dept Elective\n(1)", cr: 3, x: 320, y: 730, stroke: "#64748b" },
-      { id: "entrep", name_ar: "الريادة\nوالابتكار", name_en: "Entrepreneurship\n& Innovation", cr: 2, x: 160, y: 730, stroke: "#f43f5e" },
+      { id: "linux_lab", name_ar: "مختبر نظام\nLinux", name_en: "Linux System\nLab", cr: 1, x: 1180, y: 730, stroke: "#d946ef" },
+      { id: "networks", name_ar: "شبكات\nالحاسوب", name_en: "Computer\nNetworks", cr: 3, x: 1020, y: 730, stroke: "#d946ef" },
+      { id: "net_lab", name_ar: "مختبر شبكات\nالحاسوب", name_en: "Networks\nLab", cr: 1, x: 860, y: 730, stroke: "#d946ef" },
+      { id: "ai", name_ar: "الذكاء\nالاصطناعي", name_en: "Artificial\nIntelligence", cr: 3, x: 700, y: 730, stroke: "#f59e0b" },
+      { id: "leadership", name_ar: "القيادة\nوالمسؤولية", name_en: "Leadership &\nResponsibility", cr: 2, x: 540, y: 730, stroke: "#f43f5e" },
+      { id: "dept_elec1", name_ar: "اختياري\nقسم (1)", name_en: "Dept Elective\n(1)", cr: 3, x: 380, y: 730, stroke: "#64748b" },
+      { id: "entrep", name_ar: "الريادة\nوالابتكار", name_en: "Entrepreneurship\n& Innovation", cr: 2, x: 220, y: 730, stroke: "#f43f5e" },
 
       // الصف 6 (y: 870)
-      { id: "web_sec", name_ar: "أمن الويب", name_en: "Web\nSecurity", cr: 3, x: 1220, y: 870, stroke: "#d946ef" },
-      { id: "net_sec", name_ar: "أمن شبكات\nالحاسوب", name_en: "Network\nSecurity", cr: 3, x: 1050, y: 870, stroke: "#d946ef" },
-      { id: "data_sec", name_ar: "أمن البيانات\nالتحليلي", name_en: "Analytical Data\nSecurity", cr: 3, x: 870, y: 870, stroke: "#d946ef" },
-      { id: "comm_skills", name_ar: "مهارات\nالاتصال\nوأخلاقيات\nالمهنة", name_en: "Ethics & Comm.\nSkills", cr: 2, x: 710, y: 870, stroke: "#0284c7" },
-      { id: "dept_elec2", name_ar: "اختياري\nقسم", name_en: "Dept Elective\n(2)", cr: 3, x: 550, y: 870, stroke: "#64748b" },
-      { id: "dept_elec3", name_ar: "اختياري\nقسم", name_en: "Dept Elective\n(3)", cr: 3, x: 370, y: 870, stroke: "#64748b" },
-      { id: "dept_elec4", name_ar: "اختياري\nقسم", name_en: "Dept Elective\n(4)", cr: 3, x: 210, y: 870, stroke: "#64748b" },
+      { id: "web_sec", name_ar: "أمن\nالويب", name_en: "Web\nSecurity", cr: 3, x: 1260, y: 870, stroke: "#d946ef" },
+      { id: "net_sec", name_ar: "أمن شبكات\nالحاسوب", name_en: "Network\nSecurity", cr: 3, x: 1100, y: 870, stroke: "#d946ef" },
+      { id: "data_sec", name_ar: "أمن البيانات\nالتحليلي", name_en: "Analytical Data\nSecurity", cr: 3, x: 860, y: 870, stroke: "#d946ef" },
+      { id: "comm_skills", name_ar: "مهارات الاتصال\nوأخلاقيات المهنة", name_en: "Ethics & Comm.\nSkills", cr: 2, x: 680, y: 870, stroke: "#0284c7" },
+      { id: "dept_elec2", name_ar: "اختياري\nقسم (2)", name_en: "Dept Elective\n(2)", cr: 3, x: 520, y: 870, stroke: "#64748b" },
+      { id: "dept_elec3", name_ar: "اختياري\nقسم (3)", name_en: "Dept Elective\n(3)", cr: 3, x: 360, y: 870, stroke: "#64748b" },
+      { id: "dept_elec4", name_ar: "اختياري\nقسم (4)", name_en: "Dept Elective\n(4)", cr: 3, x: 200, y: 870, stroke: "#64748b" },
 
       // الصف 7 (y: 1010)
-      { id: "sw_sec", name_ar: "أمن\nالبرمجيات", name_en: "Software\nSecurity", cr: 3, x: 1300, y: 1010, stroke: "#d946ef" },
-      { id: "eth_hack2", name_ar: "الاختراق\nالأخلاقي (2)", name_en: "Ethical\nHacking (2)", cr: 3, x: 1110, y: 1010, stroke: "#d946ef" },
-      { id: "eth_hack1", name_ar: "الاختراق\nالأخلاقي (1)", name_en: "Ethical\nHacking (1)", cr: 3, x: 960, y: 1010, stroke: "#d946ef" },
-      { id: "net_sec_lab", name_ar: "مختبر أمن\nشبكات\nالحاسوب", name_en: "Network Security\nLab", cr: 1, x: 790, y: 1010, stroke: "#d946ef" },
-      { id: "net_protect", name_ar: "حماية\nشبكات\nالحاسوب", name_en: "Network\nProtection", cr: 3, x: 630, y: 1010, stroke: "#d946ef" },
-      { id: "protect_lab", name_ar: "مختبر حماية\nشبكات\nالحاسوب", name_en: "Network Protection\nLab", cr: 1, x: 470, y: 1010, stroke: "#d946ef" },
-      { id: "training", name_ar: "تدريب\nميداني", name_en: "Field\nTraining", cr: 3, x: 310, y: 1010, stroke: "#d946ef" },
+      { id: "sw_sec", name_ar: "أمن\nالبرمجيات", name_en: "Software\nSecurity", cr: 3, x: 1340, y: 1010, stroke: "#d946ef" },
+      { id: "eth_hack2", name_ar: "الاختراق\nالأخلاقي (2)", name_en: "Ethical Hacking\n(2)", cr: 3, x: 1180, y: 1010, stroke: "#d946ef" },
+      { id: "eth_hack1", name_ar: "الاختراق\nالأخلاقي (1)", name_en: "Ethical Hacking\n(1)", cr: 3, x: 1020, y: 1010, stroke: "#d946ef" },
+      { id: "net_sec_lab", name_ar: "مختبر أمن\nشبكات الحاسوب", name_en: "Network Security\nLab", cr: 1, x: 860, y: 1010, stroke: "#d946ef" },
+      { id: "net_protect", name_ar: "حماية شبكات\nالحاسوب", name_en: "Network\nProtection", cr: 3, x: 700, y: 1010, stroke: "#d946ef" },
+      { id: "protect_lab", name_ar: "مختبر حماية\nالشبكات", name_en: "Network Protection\nLab", cr: 1, x: 540, y: 1010, stroke: "#d946ef" },
+      { id: "training", name_ar: "تدريب\nميداني", name_en: "Field\nTraining", cr: 3, x: 360, y: 1010, stroke: "#d946ef" },
 
-      // الصف 8 (y: 1150) - مشاريع التخرج
-      { id: "proj2", name_ar: "مشروع تخرج\n2", name_en: "Graduation\nProject (2)", cr: 2, x: 800, y: 1150, stroke: "#d946ef" },
-      { id: "proj1", name_ar: "مشروع تخرج\n1", name_en: "Graduation\nProject (1)", cr: 1, x: 640, y: 1150, stroke: "#d946ef" }
+      // الصف 8 (y: 1150)
+      { id: "proj2", name_ar: "مشروع تخرج\n2", name_en: "Graduation\nProject (2)", cr: 2, x: 840, y: 1150, stroke: "#d946ef" },
+      { id: "proj1", name_ar: "مشروع تخرج\n1", name_en: "Graduation\nProject (1)", cr: 1, x: 680, y: 1150, stroke: "#d946ef" }
     ];
 
-    // شبكة العلاقات والأسهم المتقاطعة والمتصلة بدقة حسب الخطة
+    // روابط الأسهم بمسارات نظيفة بدون تقاطعات عشوائية
     const links = [
       // الصف 1
       { from: "calc1", to: "calc2", type: "solid" },
       { from: "intro_it", to: "prog1", type: "dashed" },
       { from: "prog1", to: "calc1", type: "dashed" },
 
-      // من الصف 1 إلى الصف 2
+      // الصف 1 -> 2
       { from: "prog1", to: "sec_fund", type: "dashed" },
       { from: "prog1", to: "discrete", type: "solid" },
       { from: "prog1", to: "oop", type: "solid" },
       { from: "calc2", to: "prob", type: "dashed" },
 
-      // من الصف 2 إلى الصف 3
+      // الصف 2 -> 3
       { from: "sec_fund", to: "risk_mgmt", type: "solid" },
       { from: "sec_fund", to: "sec_ethics", type: "solid" },
       { from: "discrete", to: "modern_os", type: "solid" },
@@ -659,27 +659,27 @@
       { from: "prob", to: "crypto", type: "dashed" },
       { from: "intro_it", to: "intro_web", type: "solid" },
 
-      // من الصف 3 إلى الصف 4
+      // الصف 3 -> 4
       { from: "db_fund", to: "sys_analysis", type: "solid" },
       { from: "ds", to: "algo", type: "solid" },
       { from: "assembly", to: "rev_eng", type: "solid" },
       { from: "sec_fund", to: "rev_eng", type: "dashed" },
       { from: "crypto", to: "dig_foren", type: "solid" },
 
-      // من الصف 4 إلى الصف 5
+      // الصف 4 -> 5
       { from: "modern_os", to: "linux_lab", type: "solid" },
       { from: "modern_os", to: "networks", type: "solid" },
       { from: "networks", to: "net_lab", type: "dashed" },
       { from: "algo", to: "ai", type: "solid" },
 
-      // من الصف 5 إلى الصف 6
+      // الصف 5 -> 6
       { from: "intro_web", to: "web_sec", type: "solid" },
       { from: "crypto", to: "net_sec", type: "dashed" },
       { from: "networks", to: "net_sec", type: "solid" },
       { from: "assembly", to: "data_sec", type: "dashed" },
       { from: "dig_foren", to: "data_sec", type: "solid" },
 
-      // من الصف 6 إلى الصف 7
+      // الصف 6 -> 7
       { from: "visual_lang", to: "sw_sec", type: "dashed" },
       { from: "net_sec_lab", to: "sw_sec", type: "dashed" },
       { from: "net_sec", to: "eth_hack2", type: "dashed" },
@@ -692,7 +692,7 @@
       { from: "proj1", to: "proj2", type: "dashed" }
     ];
 
-    let userState = JSON.parse(localStorage.getItem('cy_study_graph_v1') || '{}');
+    let userState = JSON.parse(localStorage.getItem('cy_study_graph_v2') || '{}');
     let activeCourseId = null;
 
     const scene = document.getElementById('scene');
@@ -928,7 +928,7 @@
       } else {
         userState[activeCourseId] = status;
       }
-      localStorage.setItem('cy_study_graph_v1', JSON.stringify(userState));
+      localStorage.setItem('cy_study_graph_v2', JSON.stringify(userState));
 
       const nodeEl = document.getElementById(`node-${activeCourseId}`);
       if (nodeEl) {
